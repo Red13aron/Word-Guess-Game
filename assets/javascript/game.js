@@ -11,16 +11,15 @@ let correctGuess = false;
 let rightLetters = 0;
 let guesses = 5;
 let word = starWords[Math.floor(Math.random() * starWords.length)];
+word = word.toLowerCase();
 let wordDisplayArray = [];
 let readyCheck = false;
-console.log(wordDisplayArray);
 let userAlphabet = [];
 const userScore = document.getElementById("userScore");
 const userGuesses = document.getElementById("userGuessesLeft");
 const userAlphabetDisplay = document.getElementById("userPreviousGuesses")
 const endGameDiv = document.getElementById("endGame");
 const starWordDiv = document.getElementById("starWord");
-word = word.toLowerCase();
 for (let i = 0; i < word.length; i++) {
     wordDisplayArray.push("_")
     starWordDiv.textContent = wordDisplayArray.join(" ");
@@ -42,24 +41,27 @@ function ready() {
     endGameDiv.textContent = "";
     starWordDiv.textContent = "";
     word = starWords[Math.floor(Math.random() * starWords.length)];
+    word = word.toLowerCase();
+    console.log("The new word is: " + word);
     wordDisplayArray = [];
     readyCheck = true;
-    console.log(wordDisplayArray);
     guesses = 5;
     loss = false;
     rightLetters = 0;
     for (let i = 0; i < word.length; i++) {
-        wordDisplayArray.push("_");
-        starWordDiv.textContent = wordDisplayArray.join(" ");
+        console.log("length of iteration: " + i);
         if (word[i] === " ") {
             rightLetters++;
+   
         }
+        wordDisplayArray.push("_")
+        starWordDiv.textContent = wordDisplayArray.join(" ");
     }
+    console.log(wordDisplayArray);
 }
 
 //The game itself
 document.onkeyup = function (event) {
-    console.log(rightLetters);
     if (event.key === "Enter") {
         ready();
         console.log("------------------------");
@@ -78,6 +80,9 @@ document.onkeyup = function (event) {
                 console.log("You guessed: " + userGuess);
                 for (let i = 0; i < word.length; i++) {
                     if (userGuess === word[i]) {
+                        if(i === 0){
+
+                        }
                         wordDisplayArray[i] = word[i];
                         starWordDiv.textContent = wordDisplayArray.join(" ");
                         rightLetters++;
