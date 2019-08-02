@@ -1,5 +1,73 @@
 .container{
     width: 75%;
-    height: 75%;
+    height: 600px;
     background:#b0e0e6;
+    position: absolute;
+    margin:0px;
+    top:50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, 50%)
 }
+
+body{
+    background-image: url(../images/starWarsBackground2.png);
+    background-size: contain;
+    background-size:1000px;
+    justify-content: center;
+    position: relative;
+    font-family: 'Poller One', cursive;
+
+}
+
+.keeperFonts{
+    font-size:24px;
+}
+
+.titleFonts{
+    font-size:48px;
+    text-decoration: underline;
+}
+
+.gameFonts{
+    font-size:36px;
+}
+
+.score{
+    margin-top: 20px;;
+    text-align:center;
+    width:50%;
+    float: left;
+}
+
+.guesses{
+    text-align:center;
+    margin-top:20px;
+    width:50%;
+    float:left;
+}
+
+.title{
+    text-align:center;
+    width:100%;
+    margin-top:150px;
+}
+
+#starWord{
+    text-align: center;
+    width: 100%;
+    margin-top:100px;
+}
+
+#userPreviousGuesses{
+    text-align: center;
+    width:100%;
+    margin-top:100px;
+}
+
+#endGame{
+    text-align:center;
+    width:100%;
+    margin-top:50px;
+}
+

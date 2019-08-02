@@ -6,18 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="assets/css/style.css">    
-    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=Poller+One&display=swap" rel="stylesheet">
+    <title>Star Wars Guessing Game</title>
 </head>
 
 <body>
+
+    <audio controls loop = "true" autoplay = "true" type ="audio/ogg" src="assets/sounds/Star Wars Cantina Band 1 2.ogg">Your browser does not support the audio element.</audio>
     <!-- Theme is Star Wars -->
     <div class = "container">
-        <div class = "score">Score: <div id="userScore">0</div></div>
-        <div class = "guesses">Guesses Left: <div id = "userGuessesLeft">5</div></div>
-        <div class = "title">Star Wars Word Game</div>
-        <div id = "userPreviousGuesses">None</div>
-        <div id = "starWord"></div>
-        <div id = "endGame"></div>
+        <div class = "keeperFonts score">Score: <div id="userScore">0</div></div>
+        <div class = "keeperFonts guesses">Guesses Left: <div id = "userGuessesLeft">5</div></div>
+        <div class = "titleFonts title">Star Wars Word Game</div>
+        <div class = "gameFonts" id = "starWord"></div>
+        <div class = "gameFonts" id = "userPreviousGuesses">None</div>
+
+        <div id = "endGame">Press Enter to get started!</div>
     </div>
     
 
