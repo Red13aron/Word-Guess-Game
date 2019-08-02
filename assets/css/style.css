@@ -71,3 +71,12 @@ body{
     margin-top:50px;
 }
 
+.dj{
+    background: #b0e0e6;
+    text-align:center;
+}
+
+.djBooth{
+    display: table;
+    margin: 0 auto;
+}
